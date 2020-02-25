@@ -1,0 +1,20 @@
+1) In python, the size of float and integer is the same in terms of bytes then how is it able to store such large values?
+
+ans:
+Eventhough , both integer and float are of 32 bits wide their use and their representation is entirely different.
+
+For example an integer cannot represent a number like 12.234
+
+In an integer all the bits are used to store the numerical value. This is done based on 2's complement of a number.
+This basically means we store numbers from -2**31 to (2**31)-1
+
+Where as in a float, those 32 bits are divided between three distinct parts
+1) 1bit - for sign of the number
+2) 8bits - for the exponent of the number
+3) 24bits - for the mantissa of the number
+This mantissa is multiplied to 2 to the power exponent part (2**exponent part)
+through which float can diplay a wider range of numbers
+
+therefore you can store much higher values as float than in integer, eventhough the both have 32 bits to store data
+
+source : https://stackoverflow.com/questions/4806944/what-is-the-difference-between-the-float-and-integer-data-type-when-the-size-is

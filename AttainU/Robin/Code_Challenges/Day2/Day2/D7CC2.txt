@@ -1,0 +1,14 @@
+2) How many bits are there in 1GB and 1MB?
+
+1Byte = 8 bits
+1Kilo Byte = 1024 Bytes
+1Mega Byte = 1024 Kilo Bytes
+1Giga Byte = 1024 Mega Bytes
+
+therefore 
+
+1Mega Byte = 1024*1024*8 bits
+           = 8,388,608 bits
+
+1Giga Byte = 1024*1024*1024*8 bits
+           = 8,589,934,592 bits
