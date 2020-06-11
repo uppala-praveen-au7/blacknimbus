@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <title>Login</title>
+   
+</head>
+<body>
+    <header class = "main-header">
+        <nav class = "navbar">
+            <a href="/api/v1/user/signUp">Sign Up</a>
+            <a class = "active" href="/api/v1/user/login">Login</a>
+        </nav>
+    </header>
+    <form action="/api/v1/user/login" method="POST">
+        <div class = "total-form">
+            <div class = "form-name">
+                <label for="name">username</label>
+                <input type="text" name="username" placeholder="username" required="true" id="name">
+                
+                
+            </div>
+            
+            <div class = "form-password">
+                <label for="password">password</label>
+                <input type="password" name="password" placeholder="password" required="true" id="password">
+            </div>
+            <button class = "reset"  type="reset">reset</button>
+            <button class="submit"  type="submit">login</button>
+        </div>
+    </form>
+    
+</body>
+</html>
