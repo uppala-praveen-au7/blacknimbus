@@ -1,7 +1,5 @@
 import React from "react";
-import { Button } from "react-materialize";
-import ClearIcon from "@material-ui/icons/Clear";
-import { red } from "@material-ui/core/colors";
+import { Button, Icon } from "react-materialize";
 
 const CharComponent = (props) => {
   const newChars = props.characters.map((character, index) => {
@@ -12,9 +10,7 @@ const CharComponent = (props) => {
           className="halfway-fab btn-floating red"
           onClick={() => props.deleteChar(index)}
         >
-          <ClearIcon
-            style={{ fontSize: 30, position: "relative", top: "5px" }}
-          ></ClearIcon>
+          <Icon>clear</Icon>
         </Button>
       </div>
     );
