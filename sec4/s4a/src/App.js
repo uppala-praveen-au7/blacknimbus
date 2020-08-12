@@ -5,11 +5,22 @@ import CharComponent from "./components/Char";
 import "./App.css";
 import "materialize-css/dist/css/materialize.min.css";
 import "materialize-css/dist/js/materialize.min.js";
+import AccessAlarmIcon from "@material-ui/icons/AccessAlarm";
+import ThreeDRotation from "@material-ui/icons/ThreeDRotation";
 
 class App extends Component {
   state = {
     length: 0,
     characters: [],
+  };
+
+  deleteChar = (index) => {
+    let newChars = [...this.state.characters];
+    newChars.splice(index, 1);
+    this.setState({
+      ...this.state,
+      characters: newChars,
+    });
   };
 
   changeHandler = (event) => {
@@ -29,9 +40,13 @@ class App extends Component {
           type="text"
           placeholder="Text"
           onChange={this.changeHandler}
+          value={this.state.characters.join("")}
         ></input>
         <Validation validate={this.state.length} />
-        <CharComponent characters={this.state.characters} />
+        <CharComponent
+          characters={this.state.characters}
+          deleteChar={this.deleteChar}
+        />
       </div>
     );
   }
