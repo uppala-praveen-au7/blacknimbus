@@ -1,0 +1,17 @@
+<%- include('includes/top.ejs')%>
+<main>
+    <% if(users.length > 0){ %>
+    <div>
+        <% for(let user of users){ %>
+        <ul>
+            <li>
+                <h2><%= user.name%></h2>
+            </li>
+        </ul>
+        <% } %>
+    </div>
+    <% } else { %>
+    <h2>No Users were listed :( </h2>
+    <% } %>
+</main>
+<%- include('includes/bottom.ejs') %>
